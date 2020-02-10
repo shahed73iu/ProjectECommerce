@@ -14,5 +14,9 @@ namespace ECommerce.Core.Contexts
         DbSet<ProductCategory> ProductCategory { get; set; }
         DbSet<FixedAmountDiscount> FixedAmountDiscounts { get; set; }
         DbSet<PercentageDiscount> PercentageDiscounts { get; set; }
+         //DbSet<Customer> Customers { get; set; }
+         //DbSet<Cart> Carts { get; set; }
+         //DbSet<Order> Orders { get; set; }
+         //DbSet<Stock> Stocks { get; set; }
     }
 }

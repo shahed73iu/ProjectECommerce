@@ -6166,11 +6166,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core.Tests\\ECommerce.Core.Tests.csproj",
+      "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core.Tests\\ECommerce.Core.Tests.csproj",
       "projectName": "ECommerce.Core.Tests",
-      "projectPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core.Tests\\ECommerce.Core.Tests.csproj",
+      "projectPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core.Tests\\ECommerce.Core.Tests.csproj",
       "packagesPath": "C:\\Users\\Shahed\\.nuget\\packages\\",
-      "outputPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core.Tests\\obj\\",
+      "outputPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

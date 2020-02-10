@@ -11,3 +11,16 @@ E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core\obj\Debug\netcoreapp2.2\E
 E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.csproj.CopyComplete
 E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.dll
 E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.pdb
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\bin\Debug\netcoreapp2.2\ECommerce.Core.deps.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\bin\Debug\netcoreapp2.2\ECommerce.Core.runtimeconfig.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\bin\Debug\netcoreapp2.2\ECommerce.Core.runtimeconfig.dev.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\bin\Debug\netcoreapp2.2\ECommerce.Core.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\bin\Debug\netcoreapp2.2\ECommerce.Core.pdb
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\bin\Debug\netcoreapp2.2\ECommerce.Data.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\bin\Debug\netcoreapp2.2\ECommerce.Data.pdb
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.csprojAssemblyReference.cache
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.AssemblyInfoInputs.cache
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.AssemblyInfo.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.csproj.CopyComplete
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core\obj\Debug\netcoreapp2.2\ECommerce.Core.pdb

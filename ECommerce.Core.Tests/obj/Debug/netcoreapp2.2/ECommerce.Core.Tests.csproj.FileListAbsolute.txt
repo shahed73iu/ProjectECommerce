@@ -11,3 +11,16 @@ E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core.Tests\obj\Debug\netcoreap
 E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.AssemblyInfo.cs
 E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.dll
 E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.pdb
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\ECommerce.Core.Tests.deps.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\ECommerce.Core.Tests.runtimeconfig.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\ECommerce.Core.Tests.runtimeconfig.dev.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\ECommerce.Core.Tests.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\bin\Debug\netcoreapp2.2\ECommerce.Core.Tests.pdb
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.csprojAssemblyReference.cache
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.AssemblyInfoInputs.cache
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.AssemblyInfo.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Core.Tests\obj\Debug\netcoreapp2.2\ECommerce.Core.Tests.pdb

@@ -11,7 +11,8 @@
           "Autofac": "4.9.4",
           "ECommerce.Data": "1.0.0",
           "Microsoft.EntityFrameworkCore": "2.2.6",
-          "Microsoft.EntityFrameworkCore.Design": "2.2.6"
+          "Microsoft.EntityFrameworkCore.Design": "2.2.6",
+          "Roslynator.Analyzers": "2.3.0"
         },
         "runtime": {
           "ECommerce.Core.dll": {}
@@ -240,6 +241,7 @@
           }
         }
       },
+      "Roslynator.Analyzers/2.3.0": {},
       "runtime.native.System.Data.SqlClient.sni/4.5.0": {
         "dependencies": {
           "runtime.win-arm64.runtime.native.System.Data.SqlClient.sni": "4.4.0",
@@ -661,6 +663,13 @@
       "sha512": "sha512-fK/76UmpC0FXBlGDFVPLJHQlDLYnGC+XY3eoDgCgbtrhi0vzbXDQ3n/IYHhqSKqXQfGw/u04A1drWs7rFVkRjw==",
       "path": "remotion.linq/2.2.0",
       "hashPath": "remotion.linq.2.2.0.nupkg.sha512"
+    },
+    "Roslynator.Analyzers/2.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-y3pnQzgCkv9rg3ZZpo5dS+M+K+zSKR589AEJ28Qlu4iza9U3acdoNROl1Aa81nfV7ZRe1Q7iJEVBM+YhXcnz8w==",
+      "path": "roslynator.analyzers/2.3.0",
+      "hashPath": "roslynator.analyzers.2.3.0.nupkg.sha512"
     },
     "runtime.native.System.Data.SqlClient.sni/4.5.0": {
       "type": "package",

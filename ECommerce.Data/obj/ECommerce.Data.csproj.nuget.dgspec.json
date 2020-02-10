@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj": {}
+    "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj": {}
   },
   "projects": {
-    "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj": {
+    "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj",
+        "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj",
         "projectName": "ECommerce.Data",
-        "projectPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj",
+        "projectPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj",
         "packagesPath": "C:\\Users\\Shahed\\.nuget\\packages\\",
-        "outputPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\obj\\",
+        "outputPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

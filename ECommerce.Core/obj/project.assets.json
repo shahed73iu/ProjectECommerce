@@ -479,6 +479,9 @@
           "lib/netstandard1.0/Remotion.Linq.dll": {}
         }
       },
+      "Roslynator.Analyzers/2.3.0": {
+        "type": "package"
+      },
       "runtime.native.System.Data.SqlClient.sni/4.5.0": {
         "type": "package",
         "dependencies": {
@@ -1802,6 +1805,29 @@
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml",
         "remotion.linq.2.2.0.nupkg.sha512",
         "remotion.linq.nuspec"
+      ]
+    },
+    "Roslynator.Analyzers/2.3.0": {
+      "sha512": "y3pnQzgCkv9rg3ZZpo5dS+M+K+zSKR589AEJ28Qlu4iza9U3acdoNROl1Aa81nfV7ZRe1Q7iJEVBM+YhXcnz8w==",
+      "type": "package",
+      "path": "roslynator.analyzers/2.3.0",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Analyzers.CodeFixes.dll",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Analyzers.dll",
+        "analyzers/dotnet/cs/Roslynator.CSharp.Workspaces.dll",
+        "analyzers/dotnet/cs/Roslynator.CSharp.dll",
+        "analyzers/dotnet/cs/Roslynator.Common.dll",
+        "analyzers/dotnet/cs/Roslynator.Core.dll",
+        "analyzers/dotnet/cs/Roslynator.Workspaces.Common.dll",
+        "analyzers/dotnet/cs/Roslynator.Workspaces.Core.dll",
+        "icon.png",
+        "roslynator.analyzers.2.3.0.nupkg.sha512",
+        "roslynator.analyzers.nuspec",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
       ]
     },
     "runtime.native.System.Data.SqlClient.sni/4.5.0": {
@@ -3633,7 +3659,8 @@
       "ECommerce.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 2.2.6",
       "Microsoft.EntityFrameworkCore.Design >= 2.2.6",
-      "Microsoft.NETCore.App >= 2.2.0"
+      "Microsoft.NETCore.App >= 2.2.0",
+      "Roslynator.Analyzers >= 2.3.0"
     ]
   },
   "packageFolders": {
@@ -3643,11 +3670,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core\\ECommerce.Core.csproj",
+      "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core\\ECommerce.Core.csproj",
       "projectName": "ECommerce.Core",
-      "projectPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core\\ECommerce.Core.csproj",
+      "projectPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core\\ECommerce.Core.csproj",
       "packagesPath": "C:\\Users\\Shahed\\.nuget\\packages\\",
-      "outputPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core\\obj\\",
+      "outputPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -3666,8 +3693,8 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj": {
-              "projectPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj"
+            "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj": {
+              "projectPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj"
             }
           }
         }
@@ -3698,6 +3725,12 @@
             "target": "Package",
             "version": "[2.2.0, )",
             "autoReferenced": true
+          },
+          "Roslynator.Analyzers": {
+            "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+            "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.3.0, )"
           }
         },
         "imports": [

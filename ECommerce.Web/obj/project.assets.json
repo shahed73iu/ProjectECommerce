@@ -13394,11 +13394,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Web\\ECommerce.Web.csproj",
+      "projectUniqueName": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
       "projectName": "ECommerce.Web",
-      "projectPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Web\\ECommerce.Web.csproj",
+      "projectPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Web\\ECommerce.Web.csproj",
       "packagesPath": "C:\\Users\\Shahed\\.nuget\\packages\\",
-      "outputPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Web\\obj\\",
+      "outputPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Web\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13417,11 +13417,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core\\ECommerce.Core.csproj": {
-              "projectPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Core\\ECommerce.Core.csproj"
+            "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core\\ECommerce.Core.csproj": {
+              "projectPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Core\\ECommerce.Core.csproj"
             },
-            "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj": {
-              "projectPath": "E:\\devskill classes\\ProjectsFinals\\CRUD\\ECommerce.Data\\ECommerce.Data.csproj"
+            "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj": {
+              "projectPath": "E:\\devskill classes\\ProjectsFinals\\ProjectECommerce\\ECommerce.Data\\ECommerce.Data.csproj"
             }
           }
         }
