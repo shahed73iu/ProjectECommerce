@@ -198,6 +198,14 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.110.24, )"
+            },
+            "AWSSDK.SQS": {
+              "target": "Package",
+              "version": "[3.3.102.65, )"
+            },
             "Autofac.Extensions.DependencyInjection": {
               "target": "Package",
               "version": "[5.0.1, )"

@@ -9,7 +9,6 @@ E:\devskill classes\ProjectsFinals\CRUD\ECommerce.Data\obj\Debug\netcoreapp2.2\E
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Data\bin\Debug\netcoreapp2.2\ECommerce.Data.deps.json
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Data\bin\Debug\netcoreapp2.2\ECommerce.Data.dll
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Data\bin\Debug\netcoreapp2.2\ECommerce.Data.pdb
-E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Data\obj\Debug\netcoreapp2.2\ECommerce.Data.csprojAssemblyReference.cache
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Data\obj\Debug\netcoreapp2.2\ECommerce.Data.AssemblyInfoInputs.cache
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Data\obj\Debug\netcoreapp2.2\ECommerce.Data.AssemblyInfo.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Data\obj\Debug\netcoreapp2.2\ECommerce.Data.dll

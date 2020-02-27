@@ -11,7 +11,7 @@ using SMS4BD.Core.ViewModels;
 namespace ECommerce.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //,Authorize]
+   // [Authorize]
     public class ProductController : Controller
     {
         private IProductService _productService;
@@ -58,14 +58,17 @@ namespace ECommerce.Web.Areas.Admin.Controllers
             ViewBag.CategoryList = categories;            
             return View(model);
         }
+
+
         public IActionResult Edit(int id)
         {
             var model = new ProductUpdateModel();
             model.Load(id);
             return View(model);
         }
+
         [HttpPost]
-        //[ValidateAntiForgeryToken]
+        [ValidateAntiForgeryToken]
         public IActionResult Edit(ProductUpdateModel model)
         {
             if (ModelState.IsValid)
@@ -74,6 +77,7 @@ namespace ECommerce.Web.Areas.Admin.Controllers
             }
             return View(model);
         }
+
         [HttpPost]
         public IActionResult Delete(int id)
         {

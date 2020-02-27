@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace ECommerce.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
-   // [Authorize]
+  // [Authorize]
     public class DashboardController : Controller
     {
         public IActionResult Index()

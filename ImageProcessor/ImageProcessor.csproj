@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+    <UserSecretsId>dotnet-ImageProcessor-7F6D142A-9B5D-4350-8FD0-DD6417459788</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.DynamoDBv2" Version="3.3.105" />
+    <PackageReference Include="AWSSDK.S3" Version="3.3.110.24" />
+    <PackageReference Include="AWSSDK.SQS" Version="3.3.102.65" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="3.0.0" />
+  </ItemGroup>
+</Project>

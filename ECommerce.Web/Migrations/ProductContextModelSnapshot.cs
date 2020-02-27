@@ -69,7 +69,11 @@ namespace ECommerce.Web.Migrations
 
                     b.Property<double>("Price");
 
+                    b.Property<int?>("StockId");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("StockId");
 
                     b.ToTable("Products");
                 });
@@ -106,6 +110,23 @@ namespace ECommerce.Web.Migrations
                     b.ToTable("ProductImages");
                 });
 
+            modelBuilder.Entity("ECommerce.Core.Entities.Stock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<double>("TotalAmount");
+
+                    b.Property<int>("TotalProductCount");
+
+                    b.Property<int>("TotalProductSale");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Stocks");
+                });
+
             modelBuilder.Entity("ECommerce.Core.Entities.FixedAmountDiscount", b =>
                 {
                     b.HasBaseType("ECommerce.Core.Entities.Discount");
@@ -126,6 +147,13 @@ namespace ECommerce.Web.Migrations
                         .WithOne("PriceDiscount")
                         .HasForeignKey("ECommerce.Core.Entities.Discount", "ProductId")
                         .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("ECommerce.Core.Entities.Product", b =>
+                {
+                    b.HasOne("ECommerce.Core.Entities.Stock", "Stock")
+                        .WithMany("Products")
+                        .HasForeignKey("StockId");
                 });
 
             modelBuilder.Entity("ECommerce.Core.Entities.ProductCategory", b =>

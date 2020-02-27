@@ -24,6 +24,8 @@
     ".NETCoreApp,Version=v2.2": {
       "ECommerce.Web/1.0.0": {
         "dependencies": {
+          "AWSSDK.S3": "3.3.110.24",
+          "AWSSDK.SQS": "3.3.102.65",
           "Autofac.Extensions.DependencyInjection": "5.0.1",
           "ECommerce.Core": "1.0.0",
           "ECommerce.Data": "1.0.0",
@@ -66,6 +68,45 @@
         },
         "compile": {
           "lib/netstandard2.0/Autofac.Extensions.DependencyInjection.dll": {}
+        }
+      },
+      "AWSSDK.Core/3.3.104.26": {
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.104.26"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.Core.dll": {}
+        }
+      },
+      "AWSSDK.S3/3.3.110.24": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.104.26"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.S3.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.110.24"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.S3.dll": {}
+        }
+      },
+      "AWSSDK.SQS/3.3.102.65": {
+        "dependencies": {
+          "AWSSDK.Core": "3.3.104.26"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AWSSDK.SQS.dll": {
+            "assemblyVersion": "3.3.0.0",
+            "fileVersion": "3.3.102.65"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AWSSDK.SQS.dll": {}
         }
       },
       "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
@@ -3855,6 +3896,27 @@
       "sha512": "sha512-92/AmuykrdvaLlE8Y4sc4SlX2RrCeClUqddjNi7cAYsOsVD/jq5JXDP1ZhHSBan4P/o7AKjpxjD/MrPTO0DHRw==",
       "path": "autofac.extensions.dependencyinjection/5.0.1",
       "hashPath": "autofac.extensions.dependencyinjection.5.0.1.nupkg.sha512"
+    },
+    "AWSSDK.Core/3.3.104.26": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jLBuFmIxzceXtDo9eq9cNyFHjzGb0+vR7cWzzU9kjErPiIPiDE7gCJDRAPKxK5kWW9rXDi36ZCQScmFk+XVjUw==",
+      "path": "awssdk.core/3.3.104.26",
+      "hashPath": "awssdk.core.3.3.104.26.nupkg.sha512"
+    },
+    "AWSSDK.S3/3.3.110.24": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-biIHpir79mUCGWz/WT/Uqf7CyDJR88Z+ww3AGdSyvAHwIj+o8ls6x4aftHhm7RJLfNr5s0eQ8L5tpYMMnfz33A==",
+      "path": "awssdk.s3/3.3.110.24",
+      "hashPath": "awssdk.s3.3.3.110.24.nupkg.sha512"
+    },
+    "AWSSDK.SQS/3.3.102.65": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NW5PaI34NHLByCQvys+Gxs4JSageh9lzlI9qIofiejDZ6vg7WPkgko8SP84sWVvPmSugTeSE4ufiASmXGuwBbw==",
+      "path": "awssdk.sqs/3.3.102.65",
+      "hashPath": "awssdk.sqs.3.3.102.65.nupkg.sha512"
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/2.8.0": {
       "type": "package",

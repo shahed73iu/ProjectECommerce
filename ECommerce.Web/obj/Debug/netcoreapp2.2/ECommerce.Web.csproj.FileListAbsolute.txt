@@ -77,8 +77,15 @@ E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netc
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Product\Index.cshtml.g.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Shared\_Layout.cshtml.g.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Shared\_Notification.cshtml.g.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Stock\Add.cshtml.g.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\Upload\Index.cshtml.g.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Admin\Views\_ViewStart.cshtml.g.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Views\Account\Login.cshtml.g.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Views\Account\Register.cshtml.g.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Index.cshtml.g.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Views\Home\Privacy.cshtml.g.cs
 E:\devskill classes\ProjectsFinals\ProjectECommerce\ECommerce.Web\obj\Debug\netcoreapp2.2\Razor\Views\Shared\Error.cshtml.g.cs

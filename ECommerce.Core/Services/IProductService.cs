@@ -18,6 +18,8 @@ namespace ECommerce.Core.Services
         ProductCategory GetProductCategory(int productId);
         void EditProduct(Product product);
         void DeleteProduct(int id);
+        IEnumerable<Product> GetAllProducts();
+        Product GetProductByName(string name);
     }
 
 }

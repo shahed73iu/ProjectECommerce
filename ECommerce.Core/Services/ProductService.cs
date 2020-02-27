@@ -46,9 +46,19 @@ namespace ECommerce.Core.Services
             _storeUnitOfWork.Save();
        }
 
+        public IEnumerable<Product> GetAllProducts()
+        {
+            return _storeUnitOfWork.ProductRepositroy.GetAllProductList();
+        }
+
         public Product GetProduct(int id)
         {
             return _storeUnitOfWork.ProductRepositroy.GetById(id);
+        }
+
+        public Product GetProductByName(string name)
+        {
+            return _storeUnitOfWork.ProductRepositroy.GetProductByName(name);
         }
 
         public ProductCategory GetProductCategory(int productId)

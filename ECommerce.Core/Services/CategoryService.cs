@@ -34,6 +34,8 @@ namespace ECommerce.Core.Services
 
         public void EditCategory(Category category)
         {
+            if (category == null || string.IsNullOrWhiteSpace(category.Name))
+                throw new InvalidOperationException("Category name is missing");
             var oldCategory = _storeUnitOfWork.CategoryRepository.GetById(category.Id);
             oldCategory.Name = category.Name;
             _storeUnitOfWork.Save();

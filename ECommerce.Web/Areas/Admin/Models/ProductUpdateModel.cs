@@ -20,12 +20,19 @@ namespace ECommerce.Web.Areas.Admin.Models
         public double Price { get; set; }
         [Required]
         public string Description { get; set; }
+        [Required]
         public Category Category { get; set; }
         public IFormFile Image { get; set; }
         public IList<ProductImage> Images { get; set; }
 
         private IProductService _productService;
         private ICategoryService _categoryService;
+
+        public IEnumerable<Product> GetAllProductList()
+        {
+            return _productService.GetAllProducts();
+        }
+
         public ProductUpdateModel()
         {
             _productService = Startup.AutofacContainer.Resolve<IProductService>();

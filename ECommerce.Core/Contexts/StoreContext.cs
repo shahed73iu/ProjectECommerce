@@ -51,7 +51,13 @@ namespace ECommerce.Core.Contexts
                 .HasOne(pc => pc.Category)
                 .WithMany(cd => cd.Categories)
                 .HasForeignKey(pc => pc.CategoryId);
-            
+
+
+            builder.Entity<Stock>()
+                .HasMany(p => p.Products)
+                .WithOne(f => f.Stock);
+
+
             //builder.Entity<Customer>()
             //    .HasMany(cl => cl.Carts)
             //    .WithOne(pp => pp.Customer);
@@ -63,14 +69,11 @@ namespace ECommerce.Core.Contexts
             //builder.Entity<Cart>()
             //  .HasOne(p => p.Order)
             //  .WithOne(d => d.Cart);
-            
+
             //builder.Entity<Stock>()
             //.HasOne(p => p.Order)
             //.WithOne(d => d.Stock);
 
-            //builder.Entity<Stock>()
-            //.HasOne(p => p.Product)
-            //.WithOne(d => d.Stock);
 
             base.OnModelCreating(builder);
         }
@@ -81,9 +84,11 @@ namespace ECommerce.Core.Contexts
         public DbSet<ProductCategory> ProductCategory { get; set; }
         public DbSet<FixedAmountDiscount> FixedAmountDiscounts { get; set; }
         public DbSet<PercentageDiscount> PercentageDiscounts { get; set; }
+        public DbSet<Stock> Stocks { get; set; }
+
+
         //public DbSet<Customer> Customers { get; set; }
         //public DbSet<Cart> Carts { get; set; }
         //public DbSet<Order> Orders { get; set; }
-        //public DbSet<Stock> Stocks { get; set; }
     }
 }

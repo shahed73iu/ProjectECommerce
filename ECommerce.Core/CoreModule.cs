@@ -47,6 +47,15 @@ namespace ECommerce.Core
             builder.RegisterType<ProductService>().As<IProductService>()
                .InstancePerLifetimeScope();
 
+            builder.RegisterType<StockRepository>().As<IStockRepository>()
+            .InstancePerLifetimeScope();
+            builder.RegisterType<StockService>().As<IStockService>()
+              .InstancePerLifetimeScope();
+          
+
+
+
+
             base.Load(builder);
         }
     }

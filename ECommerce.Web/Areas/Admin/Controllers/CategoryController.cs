@@ -11,7 +11,7 @@ using SMS4BD.Core.ViewModels;
 namespace ECommerce.Web.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    //, Authorize]
+   // [Authorize]
     public class CategoryController : Controller
     {
         private ICategoryService _categoryService;
@@ -53,11 +53,11 @@ namespace ECommerce.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(CategoryUpdateModel model)
         {
-            if (ModelState.IsValid)
-            {
-                model.EditCategory();
-            }
-            return View(model);
+                if (ModelState.IsValid)
+                {
+                    model.EditCategory();
+                }
+                return View(model);
         }
 
         [HttpPost]

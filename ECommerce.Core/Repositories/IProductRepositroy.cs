@@ -8,5 +8,7 @@ namespace ECommerce.Core.Repositories
 {
     public interface IProductRepositroy : IRepository<Product>
     {
+        IEnumerable<Product> GetAllProductList();
+        Product GetProductByName(string name);
     }
 }

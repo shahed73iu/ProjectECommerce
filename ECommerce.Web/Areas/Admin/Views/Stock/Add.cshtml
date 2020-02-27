@@ -1,0 +1,82 @@
+﻿@model ECommerce.Web.Areas.Admin.Models.StockUpdateModel
+
+@{
+    ViewData["Title"] = "Add";
+}
+
+@section styles
+{
+    <style>
+
+        .ui-autocomplete-loading {
+            background: #fff no-repeat 95%;
+            background-image: url('../../Content/assets/images/ui-anim.gif');
+        }
+    </style>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+}
+
+@section scripts
+{
+    <script src="~/lib/jquery/jquery.js"></script>
+
+    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>*@
+}
+
+@section Notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}
+
+
+<form enctype="multipart/form-data" asp-controller="stock" asp-action="Add" method="post" class="form-horizontal">
+    @Html.AntiForgeryToken()
+    <div class="card card-secondary">
+        <div class="card-body">
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label asp-for="TotalProductCount" class="control-label">Total Products</label>
+                    <input name="TotalProductCount" asp-for="TotalProductCount" class="form-control form-control-sm" required />
+                    <span asp-validation-for="TotalProductCount" class="text-danger"></span>
+                </div>
+                
+                <div class="form-group col-md-4">
+                    <label asp-for="Product.Name" class="control-label">Products</label>
+                    <select name="Product.Name" class="form-control form-control-sm select2" style="width: 100%;">
+                        <option disabled selected> Please Select a new Item </option>
+                        @foreach (var item in ViewBag.ProductList)
+                        {
+                            <option value="@item.Name">@item.Name</option>
+                        }
+                    </select>
+                </div>
+
+                @*<div class="form-group col-md-4">
+                    <label asp-for="Category.Name" class="control-label">Categories</label>
+                    <select name="Category.Name" class="form-control form-control-sm select2" style="width: 100%;">
+                        <option disabled selected> Please Select a new Item </option>
+                        @foreach (var item in ViewBag.CategoryList)
+                        {
+                            <option value="@item.Name">@item.Name</option>
+                        }
+                    </select>
+                </div>*@
+
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <div class="float-left">
+            <button type="submit" class="btn btn-info pull-left">Submit</button>
+        </div>
+        <div class="float-right">
+
+            <a asp-area="Admin" asp-controller="Stock" asp-action="index" class="btn btn-outline-info pull-right" href="~/admin/stock/index">Back To List</a>
+        </div>
+    </div>
+
+</form>
+
+
