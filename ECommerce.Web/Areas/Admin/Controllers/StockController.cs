@@ -18,13 +18,7 @@ namespace ECommerce.Web.Areas.Admin.Controllers
         {
             _stockService = stockService;
         }
-       
-        //public IActionResult Index()
-        //{
-        //    var model = new StockViewModel();
-        //    return View(model);
-        //}
-
+      
         public IActionResult Add()
         {
             var model = new StockUpdateModel();
@@ -36,22 +30,18 @@ namespace ECommerce.Web.Areas.Admin.Controllers
             ViewBag.CategoryList = categories;
             return View(model);
         }
-
-
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Add(StockUpdateModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                model.AddNewStockRecord();
+                model.AddStockRecord();
             }
             var products = model.GetAllProductList();
             ViewBag.ProductList = products;
             return View(model);
         }
-
-
 
     }
 }

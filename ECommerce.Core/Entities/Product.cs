@@ -14,9 +14,8 @@ namespace ECommerce.Core.Entities
         public IList<ProductImage> Images { get; set; }
         public IList<ProductCategory> Categories { get; set; }
         public Discount PriceDiscount { get; set; }
-        public Stock Stock { get; set; }
-        //public Cart Cart { get; set; }
-
+       //1  public IList<ProductStock> Stocks { get; set; }
+       //
+        public Stock ProductStock { get; set; }
     }
-}
-    
+} 

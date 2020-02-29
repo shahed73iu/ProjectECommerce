@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace ECommerce.Controllers
 {
-   // [Area("Admin") ]
-   //[Authorize]
+    //[Area("Admin")]
+    //[Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;

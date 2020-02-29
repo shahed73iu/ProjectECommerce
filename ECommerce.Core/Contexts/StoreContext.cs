@@ -25,7 +25,7 @@ namespace ECommerce.Core.Contexts
                     _connectionString,
                     m => m.MigrationsAssembly(_migrationAssemblyName));
             }
-
+            dbContextOptionsBuilder.EnableSensitiveDataLogging();
             base.OnConfiguring(dbContextOptionsBuilder);
         }
 
@@ -53,28 +53,25 @@ namespace ECommerce.Core.Contexts
                 .HasForeignKey(pc => pc.CategoryId);
 
 
-            builder.Entity<Stock>()
-                .HasMany(p => p.Products)
-                .WithOne(f => f.Stock);
+            builder.Entity<Product>()
+                .HasOne(p => p.ProductStock)
+                .WithOne(d => d.Product);
 
+            //---------------------------------------------------
+            /* builder.Entity<ProductStock>()
+                .HasKey(pc => new { pc.ProductId, pc.StockId });
 
-            //builder.Entity<Customer>()
-            //    .HasMany(cl => cl.Carts)
-            //    .WithOne(pp => pp.Customer);
+             builder.Entity<ProductStock>()
+                .HasOne(pc => pc.Product)
+                .WithMany(p => p.Stocks)
+                .HasForeignKey(pc => pc.ProductId);
 
-            //builder.Entity<Cart>()
-            //    .HasMany(pr => pr.Products)
-            //    .WithOne(cr => cr.Cart);
-
-            //builder.Entity<Cart>()
-            //  .HasOne(p => p.Order)
-            //  .WithOne(d => d.Cart);
-
-            //builder.Entity<Stock>()
-            //.HasOne(p => p.Order)
-            //.WithOne(d => d.Stock);
-
-
+             builder.Entity<ProductStock>()
+                 .HasOne(pc => pc.Stock)
+                 .WithMany(cd => cd.Products)
+                 .HasForeignKey(pc => pc.StockId);
+              */
+            //---------------------------------------------------
             base.OnModelCreating(builder);
         }
 
@@ -86,9 +83,6 @@ namespace ECommerce.Core.Contexts
         public DbSet<PercentageDiscount> PercentageDiscounts { get; set; }
         public DbSet<Stock> Stocks { get; set; }
 
-
-        //public DbSet<Customer> Customers { get; set; }
-        //public DbSet<Cart> Carts { get; set; }
-        //public DbSet<Order> Orders { get; set; }
+       //* public DbSet<ProductStock> ProductStock { get ; set; }
     }
 }

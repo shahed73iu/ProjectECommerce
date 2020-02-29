@@ -16,8 +16,9 @@ namespace ECommerce.Web.Areas.Admin.Models
         public int TotalProductCount { get; set; }
         public int TotalProductSale { get; set; }
         public double TotalAmount { get; set; }
-        public Category Category { get; set; }
+       
         public Product Product { get; set; }
+        public Stock Stock { get; set; }
 
 
         private IProductService _productService;
@@ -36,31 +37,34 @@ namespace ECommerce.Web.Areas.Admin.Models
             _stockService = stockService;
         }
 
-        public IEnumerable<Product> GetAllProductList()
-        {
-            return _productService.GetAllProducts();
-        }
-
-        public void AddNewStockRecord()
+        public void AddStockRecord()
         {
             try
             {
                 var product = _productService.GetProductByName(this.Product.Name);
-                _stockService.AddNewStock(new Stock
-                {
-                    Id = product.Id,
-                    TotalProductCount = this.TotalProductCount
-                    //Products = new List<Product>()
-                    //{
-                    //    new Product
-                    //    {
-                    //        Id = product.Id
-                    //    }
-                    //}
 
-                });
+                var stockOfTheProduct = _stockService.GetStockByProductId(product.Id);
+
+                if (stockOfTheProduct != null)
+                {
+                    _stockService.AddExistingStock(new Stock
+                    {
+                        Id = stockOfTheProduct.Id,
+                        TotalProductCount = this.TotalProductCount
+                    });
+                    Notification = new NotificationModel("Success!", "Stock Successfully Updated", NotificationType.Success);
+                }
+                else
+                {
+                    _stockService.AddNewStock(new Stock
+                    {
+                        TotalProductCount = this.TotalProductCount,
+                        ProductId = product.Id
+                    });
                 Notification = new NotificationModel("Success!", "Stock Successfully Added", NotificationType.Success);
+                }
             }
+
             catch (InvalidOperationException iex)
             {
                 Notification = new NotificationModel("Failed!", "Failed to Add Stock, please provide stock details", NotificationType.Fail);
@@ -69,6 +73,44 @@ namespace ECommerce.Web.Areas.Admin.Models
             {
                 Notification = new NotificationModel("Failed!!", "Failed to Add Stock , please try again with valid details", NotificationType.Fail);
             }
+
         }
-    }
+
+        public IEnumerable<Product> GetAllProductList()
+        {
+            return _productService.GetAllProducts();
+        }
+
+        //public void AddNewStockRecord()
+        //{
+        //    try
+        //    {
+        //        var product = _productService.GetProductByName(this.Product.Name);
+
+        //        _stockService.AddNewStock(new Stock
+        //        {
+        //            TotalProductCount = this.TotalProductCount,
+
+        //            Products = new List<ProductStock>()
+        //            {
+        //                new ProductStock
+        //                {
+        //                    ProductId = product.Id
+        //                }
+        //            }
+
+        //        });
+
+        //        Notification = new NotificationModel("Success!", "Stock Successfully Added", NotificationType.Success);
+        //    }
+        //    catch (InvalidOperationException iex)
+        //    {
+        //        Notification = new NotificationModel("Failed!", "Failed to Add Stock, please provide stock details", NotificationType.Fail);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Notification = new NotificationModel("Failed!!", "Failed to Add Stock , please try again with valid details", NotificationType.Fail);
+        //    }
+        //    }
+        }
 }

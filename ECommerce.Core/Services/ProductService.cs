@@ -43,8 +43,9 @@ namespace ECommerce.Core.Services
             oldProduct.Description = product.Description;
             oldProduct.Price = product.Price;
             oldProduct.ImageUrl = product.ImageUrl;
+           // oldProduct.StockId = product.StockId;
             _storeUnitOfWork.Save();
-       }
+        }
 
         public IEnumerable<Product> GetAllProducts()
         {
@@ -83,5 +84,11 @@ namespace ECommerce.Core.Services
                pageSize,
                true);                
         }
+
+        //public void UpdateNewProduct(Product product)
+        //{
+        //    _storeUnitOfWork.ProductRepositroy.GetById(product.Id);
+
+        //}
     }
 }

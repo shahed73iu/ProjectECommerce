@@ -10,14 +10,11 @@ namespace ECommerce.Core.Entities
         public int TotalProductCount { get; set; }
         public int TotalProductSale { get; set; }
         public double TotalAmount { get; set; }
-        public IList<Product> Products { get; set; }
 
-
-
-        //public int ProductId { get; set; }
-        //public Product Product { get; set; }
-        // public int OrderId { get; set; }
-        // public Order Order { get; set; }
+        //
+        public Product Product { get; set; }
+        public int ProductId { get; set; }
+        //1  public IList<ProductStock> Products { get; set; }
 
     }
 }

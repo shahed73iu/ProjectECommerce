@@ -11,8 +11,6 @@
   <ItemGroup>
     <Compile Remove="Areas\Identity\Pages\Account\Login.cshtml.cs" />
     <Compile Remove="Areas\Identity\Pages\Account\Register.cshtml.cs" />
-    <Compile Remove="Migrations\20200225042226_StockRelation.cs" />
-    <Compile Remove="Migrations\20200225042226_StockRelation.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

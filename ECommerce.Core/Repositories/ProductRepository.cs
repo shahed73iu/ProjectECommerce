@@ -1,6 +1,7 @@
 ﻿using ECommerce.Core.Contexts;
 using ECommerce.Core.Entities;
 using ECommerce.Data;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,7 @@ namespace ECommerce.Core.Repositories
 
         public Product GetProductByName(string name)
         {
-            return _context.Products.Where(x => x.Name == name).FirstOrDefault();
+            return _context.Products.Include(x=>x.Categories).Where(x => x.Name == name).AsNoTracking().FirstOrDefault();
         }
     }
 }

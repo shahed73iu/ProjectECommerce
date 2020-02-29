@@ -54,8 +54,8 @@ namespace ECommerce.Web.Areas.Admin.Models
                 _productService.AddNewProduct(new Product
                 {
                     Name = this.Name,
-                    Price = this.Price,
                     Description = this.Description,
+                    Price = this.Price,
                     ImageUrl = uniqueFilePath,
                     Categories = new List<ProductCategory>()
                     {

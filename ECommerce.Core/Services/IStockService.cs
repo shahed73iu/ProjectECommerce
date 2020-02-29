@@ -7,6 +7,8 @@ namespace ECommerce.Core.Services
 {
     public interface IStockService
     {
+        Stock GetStockByProductId(int id);
         void AddNewStock(Stock stock);
+        void AddExistingStock(Stock stock);
     }
 }
