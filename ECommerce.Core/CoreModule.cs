@@ -51,10 +51,12 @@ namespace ECommerce.Core
             .InstancePerLifetimeScope();
             builder.RegisterType<StockService>().As<IStockService>()
               .InstancePerLifetimeScope();
-          
 
 
-
+            builder.RegisterType<ImageRepository>().As<IImageRepository>()
+               .InstancePerLifetimeScope();
+            builder.RegisterType<ImageService>().As<IImageService>()
+               .InstancePerLifetimeScope();
 
             base.Load(builder);
         }

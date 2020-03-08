@@ -1,4 +1,5 @@
 ﻿@model ECommerce.Web.Areas.Admin.Models.ProductUpdateModel
+
 @{
     ViewData["Title"] = "Edit Product";
 }
@@ -18,23 +19,21 @@
                 <div class="form-group col-md-3">
                     <label asp-for="Name" class="control-label">Product Name</label>
                     <input value="@Model.Name" name="Name" asp-for="Name" class="form-control form-control-sm" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
+                    
                 </div>
                 <div class="form-group col-md-2">
                     <label asp-for="Price" class="control-label">Price</label>
                     <input value="@Model.Price" name="Price" asp-for="Price" class="form-control form-control-sm" />
-                    <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-6">
                     <label asp-for="Description" class="control-label">Description</label>
                     @*<input value="@Model.Description" name="Description" asp-for="Description" class="form-control form-control-sm" />*@
                     @Html.TextArea("Description", null, new { @rows = "3", @cols = "50" })
                     @*<textarea value ="@Model.Description" name="Description" asp-for="Description" class="form-control" rows="3"></textarea>*@
-                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
 
                 @*  asp-for tag helper is set to "Photo" property. "Photo" property type is IFormFile
-                so at runtime asp.net core generates file upload control (input type=file)
+                    so at runtime asp.net core generates file upload control (input type=file)
                 *@
                 <div class="form-group row">
                     <dl>
@@ -47,21 +46,21 @@
                 <div class="form-group col-md-4">
                     <label asp-for="Category.Name" class="control-label">Categories</label>
                     <input name="Category.Name" value="@Model.Category.Name" class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
-
                 </div>
             </div>
         </div>
-        <div class="col-md-6 pull-left">
+    </div>
+    @*<div class="col-md-6 pull-left">
             <button class="btn btn-danger pull-right mr-sm" name="btnReset" id="statusReset">
                 Reset <i class="fa fa-refresh"></i>
             </button>
-        </div>     
-    </div>
+        </div>*@
 
     <div class="card-footer">
         <div class="float-left">
             <button type="submit" class="btn btn-info pull-left">Submit</button>
-        </div>      
+        </div>
+
         <div class="float-right">
             <a asp-area="admin" asp-controller="Product" asp-action="Index" class="btn btn-outline-info pull-right">Back To List</a>
         </div>

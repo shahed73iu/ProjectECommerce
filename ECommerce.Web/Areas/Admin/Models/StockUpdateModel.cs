@@ -16,7 +16,8 @@ namespace ECommerce.Web.Areas.Admin.Models
         public int TotalProductCount { get; set; }
         public int TotalProductSale { get; set; }
         public double TotalAmount { get; set; }
-       
+        public int ProductId { get; set; }
+
         public Product Product { get; set; }
         public Stock Stock { get; set; }
 
@@ -74,6 +75,52 @@ namespace ECommerce.Web.Areas.Admin.Models
                 Notification = new NotificationModel("Failed!!", "Failed to Add Stock , please try again with valid details", NotificationType.Fail);
             }
 
+        }
+
+        public void EditStock()
+        {
+            try
+            {
+                var stock = _stockService.GetStock(this.Id);
+                _stockService.EditStock(new Stock
+                {
+                    Id = this.Id,
+                    TotalProductCount = this.TotalProductCount
+                });
+                Notification = new NotificationModel("Success!", "Stock Successfully Updated!", NotificationType.Success);
+            }
+            catch (InvalidOperationException iex)
+            {
+                Notification = new NotificationModel(
+                    "Failed!",
+                    "Failed to Update Stock, please provide valid details!",
+                    NotificationType.Fail);
+            }
+            catch (Exception ex)
+            {
+                Notification = new NotificationModel(
+                    "Failed!",
+                    "Failed to Update Stock, please try again!",
+                    NotificationType.Fail);
+            }
+        }
+
+        public void Load(int id)
+        {
+            var stock = _stockService.GetStock(id);
+
+            var product = _productService.GetProduct(stock.ProductId);
+
+            if(stock != null)
+            {
+                Id = stock.Id;
+                TotalProductCount = stock.TotalProductCount;
+                Product = new Product
+                {
+                    Id = product.Id,
+                    Name = product.Name
+                };
+            }
         }
 
         public IEnumerable<Product> GetAllProductList()

@@ -1,0 +1,65 @@
+﻿@model ECommerce.Web.Areas.Admin.Models.StockUpdateModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+@section styles
+{
+    <style>
+
+        .ui-autocomplete-loading {
+            background: #fff no-repeat 95%;
+            background-image: url('../../Content/assets/images/ui-anim.gif');
+        }
+    </style>
+    <link href="~/css/bootstrap.css" rel="stylesheet" />
+}
+
+@section scripts
+{
+    <script src="~/lib/jquery/jquery.js"></script>
+
+    @*<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>*@
+}
+
+@section Notification
+{
+    @await Html.PartialAsync("_Notification", Model.Notification)
+}
+
+
+<form enctype="multipart/form-data" asp-controller="stock" asp-action="Edit" method="post" class="form-horizontal">
+    @Html.AntiForgeryToken()
+    <div class="card card-secondary">
+        <div class="card-body">
+            <div class="form-row">
+              
+                <div class="form-group col-md-4">
+                    <label asp-for="TotalProductCount" class="control-label">Total Stock</label>
+                    <input value="@Model.TotalProductCount" name="TotalProductCount" asp-for="TotalProductCount" class="form-control form-control-sm" />
+                    <span asp-validation-for="TotalProductCount" class="text-danger"></span>
+                </div>
+
+                <div class="form-group col-md-4">
+                    <label asp-for="Stock.Name" class="control-label">Stock Name</label>
+                    <input name="Stock.Name" value="@Model.Stock" class="form-control" id="disabledInput" type="text" placeholder="Disabled input here..." disabled>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <div class="float-left">
+            <button type="submit" class="btn btn-info pull-left">Submit</button>
+        </div>
+        <div class="float-right">
+
+            <a asp-area="Admin" asp-controller="Stock" asp-action="index" class="btn btn-outline-info pull-right" href="~/admin/stock/index">Back To List</a>
+        </div>
+    </div>
+
+</form>
+
+

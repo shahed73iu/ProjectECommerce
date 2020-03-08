@@ -18,56 +18,86 @@ namespace ECommerce.Web.Areas.Admin.Models
         public string Name { get; set; }
         [Required]
         public double Price { get; set; }
-        [Required]
+       // [Required]
         public string Description { get; set; }
-        [Required]
+        //[Required]
         public Category Category { get; set; }
         public IFormFile Image { get; set; }
+        public IFormFile ProductImage { get; set; }
+        public string FileName { get; set; }
+        public string FilePath { get; set; }
+        public int ProductId { get; set; }
+        public string ProductName { get; set; }
         public IList<ProductImage> Images { get; set; }
+        public ProductCategory ProductCategory { get; set; }
 
         private IProductService _productService;
         private ICategoryService _categoryService;
+        private IImageService _imageService;
+
+        
+        public ProductUpdateModel()
+        {
+            _productService = Startup.AutofacContainer.Resolve<IProductService>();
+            _categoryService = Startup.AutofacContainer.Resolve<ICategoryService>();
+            _imageService = Startup.AutofacContainer.Resolve<IImageService>();
+        }
+        public ProductUpdateModel(IProductService productService ,ICategoryService categoryService, IImageService imageService)
+        {
+            _productService = productService;
+            _categoryService = categoryService;
+            _imageService = imageService;
+            
+        }
 
         public IEnumerable<Product> GetAllProductList()
         {
             return _productService.GetAllProducts();
         }
 
-        public ProductUpdateModel()
-        {
-            _productService = Startup.AutofacContainer.Resolve<IProductService>();
-            _categoryService = Startup.AutofacContainer.Resolve<ICategoryService>();
-        }
-        public ProductUpdateModel(IProductService productService)
-        {
-            _productService = productService;
-        }
         public IEnumerable<Category> GetAllCategoryList()
         {
             return _categoryService.GetAllCategories();
         }
-        public void AddNewProduct(string uniqueFilePath)
+
+        public void AddNewProductItem()
         {
             try
             {
                 var category = _categoryService.GetCategoryByName(this.Category.Name);
-                _productService.AddNewProduct(new Product
+
+                var product = new Product
                 {
                     Name = this.Name,
                     Description = this.Description,
                     Price = this.Price,
-                    ImageUrl = uniqueFilePath,
-                    Categories = new List<ProductCategory>()
-                    {
-                        new ProductCategory
-                        {
-                            CategoryId = category.Id
-                        }
-                    }
-                });
+                    ImageUrl = this.FilePath,
+                    //Categories = new List<ProductCategory>()
+                    //{
+                    //    new ProductCategory
+                    //    {
+                    //        CategoryId = category.Id
+                    //    }
+                    //}
+                };
+
+                var productCategory = new ProductCategory()
+                {
+                    Product = product,
+                    Category = category
+                };
+                
+                var image = new ProductImage
+                {
+                    Url = product.ImageUrl,
+                    Product = product,
+                    AlternativeText = product.Name
+                };
+                _productService.AddNewProduct(product, image , productCategory);
+
                 Notification = new NotificationModel("Success!", "Product Successfully Added", NotificationType.Success);
             }
-            catch(InvalidOperationException iex)
+            catch (InvalidOperationException iex)
             {
                 Notification = new NotificationModel(
                     "Failed!",
@@ -79,9 +109,68 @@ namespace ECommerce.Web.Areas.Admin.Models
                 Notification = new NotificationModel(
                     "Failed!!",
                     "Failed to Add Product , please try again with valid details",
-                    NotificationType.Fail);                
+                    NotificationType.Fail);
             }
         }
+
+        public void ImageUpload(IFormFile productImage)
+        {
+            var randomName = Path.GetRandomFileName().Replace(".", "");
+            var fileName = System.IO.Path.GetFileName(productImage.FileName);
+            var newFileName = $"{ randomName }{ Path.GetExtension(productImage.FileName)}";
+            FileName = newFileName;
+
+            var path = $"wwwroot/upload/{randomName}{Path.GetExtension(productImage.FileName)}";
+            FilePath = path;
+            if (!System.IO.File.Exists(path))
+            {
+                using (var imageFile = System.IO.File.OpenWrite(path))
+                {
+                    using (var uploadedfile = productImage.OpenReadStream())
+                    {
+                        uploadedfile.CopyTo(imageFile);
+
+                    }
+                }
+            }
+        }
+
+        //public void AddNewProduct(string uniqueFilePath)
+        //{
+        //    try
+        //    {
+        //        var category = _categoryService.GetCategoryByName(this.Category.Name);
+        //        _productService.AddNewProduct(new Product
+        //        {
+        //            Name = this.Name,
+        //            Description = this.Description,
+        //            Price = this.Price,
+        //            ImageUrl = uniqueFilePath,
+        //            Categories = new List<ProductCategory>()
+        //            {
+        //                new ProductCategory
+        //                {
+        //                    CategoryId = category.Id
+        //                }
+        //            }
+        //        });
+        //        Notification = new NotificationModel("Success!", "Product Successfully Added", NotificationType.Success);
+        //    }
+        //    catch(InvalidOperationException iex)
+        //    {
+        //        Notification = new NotificationModel(
+        //            "Failed!",
+        //            "Failed to Add Product, please provide valide name",
+        //            NotificationType.Fail);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Notification = new NotificationModel(
+        //            "Failed!!",
+        //            "Failed to Add Product , please try again with valid details",
+        //            NotificationType.Fail);                
+        //    }
+        //}
 
         public void EditProduct()
         {

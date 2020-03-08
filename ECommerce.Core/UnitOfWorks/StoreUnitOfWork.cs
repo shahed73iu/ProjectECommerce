@@ -13,6 +13,7 @@ namespace ECommerce.Core.UnitOfWorks
         public ICategoryRepository CategoryRepository { get; set; }
         public IProductCategoryRepository ProductCategoryRepository  { get; set; }
         public IStockRepository StockRepository { get; set ; }
+        public IImageRepository ImageRepository { get; set; }
 
         public StoreUnitOfWork(string connectionString, string migrationAssemblyName)
             : base(connectionString, migrationAssemblyName)
@@ -21,6 +22,7 @@ namespace ECommerce.Core.UnitOfWorks
             CategoryRepository = new CategoryRepository(_dbContext);
             ProductCategoryRepository = new ProductCategoryRepository(_dbContext);
             StockRepository = new StockRepository(_dbContext);
+            ImageRepository = new ImageRepository(_dbContext);
         }
     }
 }

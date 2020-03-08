@@ -13,6 +13,8 @@ namespace ECommerce.Core.UnitOfWorks
         ICategoryRepository CategoryRepository { get; set; }
         IProductCategoryRepository ProductCategoryRepository { get; set; }
         IStockRepository StockRepository { get; set; }
+        IImageRepository ImageRepository { get; set; }
+
 
     }
 }

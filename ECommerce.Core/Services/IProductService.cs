@@ -13,7 +13,9 @@ namespace ECommerce.Core.Services
            string searchText,
            out int total,
            out int totalFiltered);
-        void AddNewProduct(Product product);
+        //void AddNewProduct(Product product);
+        void AddNewProduct(Product product , ProductImage productImage, ProductCategory productCategory);
+        //void AddNewProduct(Product product , ProductImage productImage);
         Product GetProduct(int id);
         ProductCategory GetProductCategory(int productId);
         void EditProduct(Product product);

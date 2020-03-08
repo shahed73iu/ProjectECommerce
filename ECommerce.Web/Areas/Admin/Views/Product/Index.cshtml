@@ -30,6 +30,12 @@
                         }
                     },
                     {
+                        "targets": 3,
+                        "render": function (data, type, row) {
+                            return data.substr( 0, 150) + '. . . . .';
+                        }
+                    },
+                    {
                         "orderable": false,
                         "targets": 4,
                         "render": function (data, type, row) {

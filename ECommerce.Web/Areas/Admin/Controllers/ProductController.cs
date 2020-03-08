@@ -42,22 +42,37 @@ namespace ECommerce.Web.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]        
+        [ValidateAntiForgeryToken]
         public IActionResult Add(ProductUpdateModel model)
         {
-            if(ModelState.IsValid)
+            if (ModelState.IsValid)
             {
-                string path = null;
-                if(model.Image != null)
-                {
-                    path = model.GetUploadedImage(model.Image.FileName);
-                }
-                model.AddNewProduct(path);
+                model.ImageUpload(model.ProductImage);
+                model.AddNewProductItem();
             }
+
             var categories = model.GetAllCategoryList();
-            ViewBag.CategoryList = categories;            
+            ViewBag.CategoryList = categories;
             return View(model);
         }
+
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public IActionResult Add(ProductUpdateModel model)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        string path = null;
+        //        if (model.Image != null)
+        //        {
+        //            path = model.GetUploadedImage(model.Image.FileName);
+        //        }
+        //        model.AddNewProduct(path);
+        //    }
+        //    var categories = model.GetAllCategoryList();
+        //    ViewBag.CategoryList = categories;
+        //    return View(model);
+        //}
 
 
         public IActionResult Edit(int id)
@@ -71,11 +86,12 @@ namespace ECommerce.Web.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult Edit(ProductUpdateModel model)
         {
-            if (ModelState.IsValid)
+           if (ModelState.IsValid)
             {
                 model.EditProduct();
             }
-            return View(model);
+            return RedirectToAction("Index");
+            //return View(model);
         }
 
         [HttpPost]

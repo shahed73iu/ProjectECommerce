@@ -28,6 +28,13 @@
     @RenderSection("styles", false)
 </head>
 <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 text-sm-center">
+                <partial name="_LoginPartial" />
+            </div>
+        </div>
+    </div>
     <div class="super_container">
 
         <!-- Header -->
@@ -141,8 +148,8 @@
 
                     <!-- Registration -->
                     <div class="info_languages has_children">
-                        <div class="dropdown_text">                           
-                            <a href="~/Account/Register" class="button--style-red"> Registration</a>                            
+                        <div class="dropdown_text">
+                            <a href="~/Account/Register" class="button--style-red"> Registration</a>
                         </div>
                     </div>
 
@@ -193,7 +200,7 @@
             </div>
         </div>
 
-        
+
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
@@ -429,7 +436,7 @@
         </script>
     </environment>
     <script src="~/js/site.js" asp-append-version="true"></script>
-   
+
     <script src="/js/jquery-3.2.1.min.js"></script>
     <script src="/css/bootstrap-4.1.3/popper.js"></script>
     <script src="/css/bootstrap-4.1.3/bootstrap.min.js"></script>

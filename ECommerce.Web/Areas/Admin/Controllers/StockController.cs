@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using ECommerce.Core.Services;
 using ECommerce.Web.Areas.Admin.Models;
 using Microsoft.AspNetCore.Mvc;
+using SMS4BD.Core.ViewModels;
 
 namespace ECommerce.Web.Areas.Admin.Controllers
 {
@@ -18,7 +19,20 @@ namespace ECommerce.Web.Areas.Admin.Controllers
         {
             _stockService = stockService;
         }
-      
+
+        public IActionResult Index()
+        {
+            var model = new StockViewModel();
+            return View(model);
+        }
+        public IActionResult GetStocks()
+        {
+            var tableModel = new DataTablesAjaxRequestModel(Request);
+            var model = new StockViewModel();
+            var data = model.GetStocks(tableModel);
+            return Json(data);
+        }
+
         public IActionResult Add()
         {
             var model = new StockUpdateModel();
@@ -43,6 +57,32 @@ namespace ECommerce.Web.Areas.Admin.Controllers
             return View(model);
         }
 
-    }
+        public IActionResult Edit(int id)
+        {
+            var model = new StockUpdateModel();
+            model.Load(id);
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Edit(StockUpdateModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.EditStock();
+            }
+            //return RedirectToAction("Index");
+                return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            var model = new StockViewModel();
+            model.Delete(id);
+            return RedirectToAction("Index");
+        }
+    }    
 }
 

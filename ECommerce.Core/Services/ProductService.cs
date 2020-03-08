@@ -1,9 +1,6 @@
 ﻿using ECommerce.Core.Entities;
-using ECommerce.Core.Services;
 using ECommerce.Core.UnitOfWorks;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace ECommerce.Core.Services
 {
@@ -16,16 +13,27 @@ namespace ECommerce.Core.Services
             _storeUnitOfWork = storeUnitOfWork;
         }
 
-        public void AddNewProduct(Product product)
+        //public void AddNewProduct(Product product)
+        //{
+        //    _storeUnitOfWork.ProductRepositroy.Add(new Product
+        //    {
+        //        Name = product.Name,
+        //        Description = product.Description,
+        //        ImageUrl = product.ImageUrl,
+        //        Categories = product.Categories,
+        //        Price = product.Price,
+        //    });
+        //    _storeUnitOfWork.Save();
+        //}
+
+        public void AddNewProduct(Product product , ProductImage productImage , ProductCategory productCategory)
         {
-            _storeUnitOfWork.ProductRepositroy.Add(new Product
-            {
-                Name = product.Name,
-                Description = product.Description,
-                ImageUrl = product.ImageUrl,
-                Categories = product.Categories,
-                Price = product.Price,
-            });
+            _storeUnitOfWork.ProductRepositroy.Add(product);
+            
+            _storeUnitOfWork.ImageRepository.Add(productImage);
+
+            _storeUnitOfWork.ProductCategoryRepository.Add(productCategory);
+            
             _storeUnitOfWork.Save();
         }
 
@@ -84,11 +92,5 @@ namespace ECommerce.Core.Services
                pageSize,
                true);                
         }
-
-        //public void UpdateNewProduct(Product product)
-        //{
-        //    _storeUnitOfWork.ProductRepositroy.GetById(product.Id);
-
-        //}
     }
 }

@@ -57,7 +57,7 @@
                 <div class="form-group row">
                     <dl>
                         <dd>
-                            <input name="Image" type="file">
+                            <input name="ProductImage" type="file">
                         </dd>
                     </dl>
                 </div>
@@ -65,7 +65,7 @@
                 <div class="form-group col-md-4">
                     <label asp-for="Category.Name" class="control-label">Categories</label>
                     <select name="Category.Name" class="form-control form-control-sm select2" style="width: 100%;" >
-                        <option disabled selected> Please Select a new Item </option>
+                        <option disabled selected> Please Select a Category </option>
                         @foreach (var item in ViewBag.CategoryList)
                         {
                             <option value="@item.Name">@item.Name</option>
