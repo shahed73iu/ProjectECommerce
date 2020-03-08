@@ -51,10 +51,7 @@ namespace ECommerce.Core.Services
         {
             var oldStock = _storeUnitOfWork.StockRepository.GetById(stock.Id);
            oldStock.TotalProductCount = stock.TotalProductCount;
-           //oldProduct.Description = product.Description;
-           //oldProduct.Price = product.Price;
-           //oldProduct.ImageUrl = product.ImageUrl;
-           //// oldProduct.StockId = product.StockId;
+           
            _storeUnitOfWork.Save();
         }
 

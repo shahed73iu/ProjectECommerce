@@ -47,33 +47,14 @@ namespace ECommerce.Web.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                model.ImageUpload(model.ProductImage);
-                model.AddNewProductItem();
+                var imageUrl = model.ImageUpload(model.ProductImage);
+                model.AddNewProductItem(imageUrl);
             }
 
             var categories = model.GetAllCategoryList();
             ViewBag.CategoryList = categories;
             return View(model);
         }
-
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public IActionResult Add(ProductUpdateModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        string path = null;
-        //        if (model.Image != null)
-        //        {
-        //            path = model.GetUploadedImage(model.Image.FileName);
-        //        }
-        //        model.AddNewProduct(path);
-        //    }
-        //    var categories = model.GetAllCategoryList();
-        //    ViewBag.CategoryList = categories;
-        //    return View(model);
-        //}
-
 
         public IActionResult Edit(int id)
         {

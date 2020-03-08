@@ -60,7 +60,7 @@ namespace ECommerce.Web.Areas.Admin.Models
             return _categoryService.GetAllCategories();
         }
 
-        public void AddNewProductItem()
+        public void AddNewProductItem(string imageUrl)
         {
             try
             {
@@ -71,14 +71,7 @@ namespace ECommerce.Web.Areas.Admin.Models
                     Name = this.Name,
                     Description = this.Description,
                     Price = this.Price,
-                    ImageUrl = this.FilePath,
-                    //Categories = new List<ProductCategory>()
-                    //{
-                    //    new ProductCategory
-                    //    {
-                    //        CategoryId = category.Id
-                    //    }
-                    //}
+                    ImageUrl = imageUrl,
                 };
 
                 var productCategory = new ProductCategory()
@@ -113,7 +106,7 @@ namespace ECommerce.Web.Areas.Admin.Models
             }
         }
 
-        public void ImageUpload(IFormFile productImage)
+        public string ImageUpload(IFormFile productImage)
         {
             var randomName = Path.GetRandomFileName().Replace(".", "");
             var fileName = System.IO.Path.GetFileName(productImage.FileName);
@@ -133,44 +126,8 @@ namespace ECommerce.Web.Areas.Admin.Models
                     }
                 }
             }
+            return newFileName;
         }
-
-        //public void AddNewProduct(string uniqueFilePath)
-        //{
-        //    try
-        //    {
-        //        var category = _categoryService.GetCategoryByName(this.Category.Name);
-        //        _productService.AddNewProduct(new Product
-        //        {
-        //            Name = this.Name,
-        //            Description = this.Description,
-        //            Price = this.Price,
-        //            ImageUrl = uniqueFilePath,
-        //            Categories = new List<ProductCategory>()
-        //            {
-        //                new ProductCategory
-        //                {
-        //                    CategoryId = category.Id
-        //                }
-        //            }
-        //        });
-        //        Notification = new NotificationModel("Success!", "Product Successfully Added", NotificationType.Success);
-        //    }
-        //    catch(InvalidOperationException iex)
-        //    {
-        //        Notification = new NotificationModel(
-        //            "Failed!",
-        //            "Failed to Add Product, please provide valide name",
-        //            NotificationType.Fail);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        Notification = new NotificationModel(
-        //            "Failed!!",
-        //            "Failed to Add Product , please try again with valid details",
-        //            NotificationType.Fail);                
-        //    }
-        //}
 
         public void EditProduct()
         {
@@ -202,27 +159,6 @@ namespace ECommerce.Web.Areas.Admin.Models
                     NotificationType.Fail);
             }
             
-        }
-        public string GetUploadedImage(string imageFileName)
-        {
-            var randomName = Path.GetRandomFileName().Replace(".", "");
-            var fileName = System.IO.Path.GetFileName(imageFileName);
-           // var path = $"{randomName}{Path.GetExtension(imageFileName)}";
-
-           var path = $"wwwroot/images/{randomName}{Path.GetExtension(imageFileName)}";
-
-            if (!System.IO.File.Exists(path))
-            {
-                using (var imageFile = System.IO.File.OpenWrite(path))
-                {
-                    using (var uploadedfile = Image.OpenReadStream())
-                    {
-                        uploadedfile.CopyTo(imageFile);
-
-                    }
-                }
-            }
-            return path;
         }
 
         public void Load(int id)

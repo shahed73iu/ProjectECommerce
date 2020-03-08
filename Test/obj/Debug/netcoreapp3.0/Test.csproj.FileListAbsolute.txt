@@ -1,0 +1,11 @@
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\bin\Debug\netcoreapp3.0\Test.exe
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\bin\Debug\netcoreapp3.0\Test.deps.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\bin\Debug\netcoreapp3.0\Test.runtimeconfig.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\bin\Debug\netcoreapp3.0\Test.runtimeconfig.dev.json
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\bin\Debug\netcoreapp3.0\Test.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\bin\Debug\netcoreapp3.0\Test.pdb
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\obj\Debug\netcoreapp3.0\Test.csprojAssemblyReference.cache
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\obj\Debug\netcoreapp3.0\Test.AssemblyInfoInputs.cache
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\obj\Debug\netcoreapp3.0\Test.AssemblyInfo.cs
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\obj\Debug\netcoreapp3.0\Test.dll
+E:\devskill classes\ProjectsFinals\ProjectECommerce\Test\obj\Debug\netcoreapp3.0\Test.pdb

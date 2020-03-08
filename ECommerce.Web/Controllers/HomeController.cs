@@ -8,6 +8,7 @@ using ECommerce.Models;
 using Microsoft.Extensions.Logging;
 using ECommerce.Web.Models;
 using Microsoft.AspNetCore.Authorization;
+using ECommerce.Core.Services;
 
 namespace ECommerce.Controllers
 {
@@ -16,15 +17,18 @@ namespace ECommerce.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        public HomeController(ILogger<HomeController> logger)
+        private IProductService _productService;
+        public HomeController(ILogger<HomeController> logger , IProductService productService)
         {
             _logger = logger;
+            _productService = productService;
         }
 
         public IActionResult Index()
         {
-            _logger.LogInformation("Hello {Name}", "Shahed");
-            return View();
+            var products = _productService.GetAllProducts();
+            ViewBag.Products = products;
+            return View(products);
         }
 
         public IActionResult Privacy()
@@ -38,28 +42,5 @@ namespace ECommerce.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
-        public IActionResult Test()
-        {
-            return View();
-        }
-
-        [HttpPost, ValidateAntiForgeryToken]
-        public IActionResult Test(TestModel model)
-        {
-            try
-            {
-                var status = false;
-                if (ModelState.IsValid)
-                {
-                    status = true;
-                }
-                throw new Exception("Fake Error");
-            }
-            catch (Exception ex)
-            {
-                _logger.LogError(ex, "Test Failed");
-            }
-            return View();
-        }
     }
 }

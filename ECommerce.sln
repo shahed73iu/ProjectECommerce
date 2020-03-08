@@ -15,7 +15,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTest", "UnitTest", "{7D
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ECommerce.Core.Tests", "ECommerce.Core.Tests\ECommerce.Core.Tests.csproj", "{0191E64E-AD6C-43F0-AD63-78B6CCC58304}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageProcessor", "ImageProcessor\ImageProcessor.csproj", "{F6E5EE1A-EC2A-4FF6-A43D-CFA9B0A93792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImageProcessor", "ImageProcessor\ImageProcessor.csproj", "{F6E5EE1A-EC2A-4FF6-A43D-CFA9B0A93792}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
